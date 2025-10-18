@@ -1,0 +1,39 @@
+.nav-1 {
+    rotate: 0deg;
+    translate: 0 0;
+    width: 32px;
+    transition: ease-in-out 1s;
+}
+
+.nav-2 {
+    rotate: 0deg;
+    translate: 0 0;
+    width: 21px;
+    transition: ease-in-out 1s;
+}
+
+.nav-1.active {
+    rotate: 405deg;
+    translate: 0 3px;
+    width: 32px;
+    transition: ease-in-out 1s;
+}
+
+.nav-2.active {
+    rotate: 315deg;
+    translate: 0 -3px;
+    width: 32px;
+    transition: ease-in-out 1s;
+}
+
+.sidemenu {
+    height: 0%;
+    overflow: hidden;
+    transition: cubic-bezier(0.67, 0.01, 0.08, 0.93) 3s;
+}
+
+.sidemenu.active {
+    height: 100%;
+    overflow: hidden;
+    transition: cubic-bezier(0.67, 0.01, 0.08, 0.93) 3s;
+}

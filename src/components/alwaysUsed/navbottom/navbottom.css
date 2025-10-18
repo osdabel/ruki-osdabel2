@@ -1,0 +1,8 @@
+.shadowing {
+  box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+
+.post {
+  transform: translateY(-5px);
+}
