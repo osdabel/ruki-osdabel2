@@ -61,6 +61,7 @@ echo -e "${GREEN}Building Application...${NC}"
 npm install
 npx prisma generate
 npx prisma db push
+npx prisma db seed
 npm run build
 
 # 8. Setup PM2 (Process Manager)
