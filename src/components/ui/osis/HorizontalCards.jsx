@@ -1,8 +1,34 @@
 'use client'
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 
-const cards = [1,2,3,4]; // ganti dengan data nyata
+const cards = [
+  {
+    id: 1,
+    title: "Candradimuka",
+    description: "Dalam Kegiatan Candradimuka peserta akan dibekali ilmu - ilmu yang bermanfaat bagi ",
+    image: "/candradimuka.jpg",
+  },
+  {
+    id: 2,
+    title: "RUKI (Ruang Kreasi Dan Informasi",
+    description: "Membuat aplikasi sederhana untuk mempermudah pengelolaan kegiatan OSIS.",
+    image: "/mockup-ruki.png",
+  },
+  {
+    id: 3,
+    title: "Sportif (Sport - Inovatif - Kompetitif)",
+    description: "Ajang menampilkan kreativitas siswa dalam bidang musik, tari, dan teater.",
+    image: "/sportif.JPG",
+  },
+  {
+    id: 4,
+    title: "AKSI (Aktualisasi Inspirasi Siswa)",
+    description: "Kompetisi menulis esai dan puisi antar kelas untuk meningkatkan minat baca.",
+    image: "/aksi.png",
+  },
+];
 
 export default function HorizontalCards() {
   const sliderRef = useRef(null);
@@ -53,6 +79,8 @@ export default function HorizontalCards() {
     sliderRef.current && sliderRef.current.scrollBy({ left: amount, behavior: "smooth" });
   }
 
+
+
   return (
     <div className="relative">
       <div className="flex items-center justify-end gap-2 mb-3">
@@ -74,18 +102,24 @@ export default function HorizontalCards() {
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
       >
-        {cards.map((c, i) => (
+        {cards.map((cards) => (
           <div
-            key={i}
-            className="min-w-[280px] flex-shrink-0 snap-start"
+            key={cards.id}
+            className="w-80 flex-shrink-0 snap-start"
           >
-            <div className="bg-blue-300 w-full h-110 mt-0 rounded-lg">
+            <div className="bg-blue-400 w-full h-110 mt-0 rounded-lg">
               <div className="foto bg-gray-900 w-full h-50 rounded-tl-lg rounded-tr-lg">
-                {/* isi foto */}
+                  <Image
+                  src={cards.image}
+                  alt={cards.title}
+                  width={300}
+                  height={100}
+                  className="object-cover w-full h-full"
+                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-bold">(Tahap Developing...) {c}</h3>
-                <p className="text-sm opacity-70">Deskripsi singkat program kerja.</p>
+              <div className="p-4 w-full h-max overflow-hidden text-white">
+                <h3 className="font-bold">{cards.title}</h3>
+                <p className="text-sm opacity-70">{cards.description}</p>
               </div>
             </div>
           </div>

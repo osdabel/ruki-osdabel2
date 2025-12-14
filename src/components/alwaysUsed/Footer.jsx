@@ -8,7 +8,7 @@ const Footer = () => {
                     <ul className="list-none opacity-50">
                         <li className="mb-4 mt-4">Home</li>
                         <li className="mb-4">OSIS</li>
-                        <li className="mb-4">Berlatih TKA</li>
+
                         <li className="mb-4">Profile</li>
                         <li className="mb-4">MPK (Soon)</li>
                         <li className="mb-4">AKSI SISWA (Soon)</li>
@@ -31,14 +31,14 @@ const Footer = () => {
                 </div>
             </div>
             <div className="w-full h-max flex items-center justify-center mt-20">
-            <h2>Social</h2>
+                <h2>Social</h2>
             </div>
             <div className="w-full h-max flex flex-col items-center justify-center mt-1 opacity-50">
-            <h3 className="underline italic">osdabelgrt@gmail.com</h3>
-            <h3>Youtube | osdabelgrt</h3>
-            <h3>Instagram | @osdabel</h3>
+                <h3 className="underline italic">osdabelgrt@gmail.com</h3>
+                <h3>Youtube | osdabelgrt</h3>
+                <h3>Instagram | @osdabel</h3>
             </div>
-            <hr className="mt-10 mb-2"/>
+            <hr className="mt-10 mb-2" />
             <div>
                 <h3 className="text-center text-sm opacity-100">
                     SMA NEGERI 18 GARUT, <br />

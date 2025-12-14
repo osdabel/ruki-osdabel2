@@ -21,7 +21,7 @@ const Sidemenu = () => {
     return (
         <>
 
-                    {/* ======== TOP MENU BAR ======== */}
+            {/* ======== TOP MENU BAR ======== */}
             <div
                 id="menuButton"
                 className="fixed top-14 left-0 w-full h-max z-30 flex items-center gap-2 px-4 cursor-pointer bg-white/70 backdrop-blur-md py-2 shadow-sm"
@@ -30,7 +30,7 @@ const Sidemenu = () => {
                 {isMenuOpen ? (
                     // X icon
                     <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="#000000">
-                        <path d="M256-256 480-480 704-256l48-48-224-224 224-224-48-48-224 224-224-224-48 48 224 224-224 224 48 48Z"/>
+                        <path d="M256-256 480-480 704-256l48-48-224-224 224-224-48-48-224 224-224-224-48 48 224 224-224 224 48 48Z" />
                     </svg>
                 ) : (
                     // Hamburger icon
@@ -41,33 +41,20 @@ const Sidemenu = () => {
                 <h1 className="text-blue-500 font-semibold">Menu</h1>
             </div>
 
-         {/* ======== SIDE MENU (di bawah menu bar) ======== */}
+            {/* ======== SIDE MENU (di bawah menu bar) ======== */}
             <div
                 id="sideMenu"
-                className={`fixed left-0 top-[90px] w-screen h-max bg-white shadow-lg z-20 transform transition-transform duration-300 rounded-br-2xl border-t border-gray-200 ${
-                    isMenuOpen ? "translate-x-0" : "-translate-x-full"
-                }`}
+                className={`fixed left-0 top-[90px] w-screen h-max bg-white shadow-lg z-20 transform transition-transform duration-300 rounded-br-2xl border-t border-gray-200 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+                    }`}
             >
                 <ul className="flex flex-col gap-3 p-5 text-gray-700 font-semibold">
-                    <Link href={'/TKA/user'}>
-                    <li className="hover:text-blue-500 cursor-pointer">Home</li>
-                    </Link>
-                    <Link href={'/TKA/user/silabus'}>
-                    <li className="hover:text-blue-500 cursor-pointer">Kisi - Kisi TKA</li>
-                    </Link>
-                    <Link href={'/TKA/user/materi'}>
-                    <li className="hover:text-blue-500 cursor-pointer">Materi TKA</li>
-                    </Link>
-                    <Link href={'/TKA/user/tryout'}>
-                    <li className="hover:text-blue-500 cursor-pointer">TryOut TKA</li>
-                    </Link>
-                    <Link href={'/TKA'}>
-                    <li className="hover:text-blue-500 cursor-pointer">Akun</li>
+                    <Link href={'/sportif18'}>
+                        <li className="hover:text-blue-500 cursor-pointer">Sportif18</li>
                     </Link>
                 </ul>
             </div>
 
-                        {/* ======== OVERLAY (klik luar untuk tutup) ======== */}
+            {/* ======== OVERLAY (klik luar untuk tutup) ======== */}
             {isMenuOpen && (
                 <div className="fixed top-[90px] left-0 w-full h-full bg-black/30 z-10"></div>
             )}

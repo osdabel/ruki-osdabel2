@@ -1,0 +1,485 @@
+{
+  "routes": {
+    "selasa": "/gallery/day-1",
+    "rabu": "/gallery/day-2",
+    "kamis": "/gallery/day-3",
+    "jumat": "/gallery/day-4"
+  },
+  "competitions": [
+    {
+      "id": 1,
+      "title": "Futsal",
+      "icon": "⚽",
+      "color": "border-blue-500",
+      "leaderboard": [
+        {
+          "rank": 1,
+          "team": "hkhkj",
+          "wins": 4,
+          "losses": 1,
+          "notes": "gold"
+        }
+      ],
+      "bracketType": "double",
+      "bracketLeft": [
+        {
+          "round": "8 Besar A",
+          "matches": [
+            {
+              "team1": "XII RPL 1",
+              "team2": "X TKJ 2",
+              "score1": 3,
+              "score2": 1,
+              "result1": "win",
+              "result2": "lose"
+            },
+            {
+              "team1": "XI DKV 1",
+              "team2": "XI OTKP 2",
+              "score1": 2,
+              "score2": 4,
+              "result2": "win",
+              "result1": "lose"
+            },
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null,
+              "result2": "lose",
+              "result1": "win"
+            },
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null,
+              "result1": "win",
+              "result2": "lose"
+            }
+          ]
+        },
+        {
+          "round": "Semi Final A",
+          "matches": [
+            {
+              "team1": "--",
+              "team2": "--",
+              "score1": null,
+              "score2": null
+            },
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null,
+              "result1": "lose",
+              "result2": "win"
+            }
+          ]
+        },
+        {
+          "round": "Round 3",
+          "matches": [
+            {
+              "team1": "TBAd",
+              "team2": "TBAg",
+              "score1": null,
+              "score2": null
+            }
+          ]
+        }
+      ],
+      "bracketRight": [
+        {
+          "round": "8 Besar B",
+          "matches": [
+            {
+              "team1": "XII AKL 3",
+              "team2": "X TKJ 1",
+              "score1": 0,
+              "score2": 4
+            },
+            {
+              "team1": "XII BDP 2",
+              "team2": "XI RPL 3",
+              "score1": 1,
+              "score2": 5
+            }
+          ]
+        },
+        {
+          "round": "Semi Final B",
+          "matches": [
+            {
+              "team1": "X TKJ 1",
+              "team2": "XI RPL 3",
+              "score1": null,
+              "score2": null
+            }
+          ]
+        }
+      ],
+      "grandFinal": {
+        "matches": [
+          {
+            "team1": "Juara Grup A",
+            "team2": "Juara Grup B",
+            "score1": null,
+            "score2": null
+          }
+        ]
+      },
+      "schedule": [
+        {
+          "day": "Selasa, 16 Des",
+          "time": "08:00",
+          "match": "XII RPL 1 vs X TKJ 2",
+          "status": "Completed"
+        },
+        {
+          "day": "Selasa, 16 Des",
+          "time": "08:45",
+          "match": "XI DKV 1 vs XI OTKP 2",
+          "status": "Completed"
+        },
+        {
+          "day": "Selasa, 16 Des",
+          "time": "09:30",
+          "match": "XII AKL 3 vs X TKJ 1",
+          "status": "Completed"
+        },
+        {
+          "day": "Selasa, 16 Des",
+          "time": "10:15",
+          "match": "XII BDP 2 vs XI RPL 3",
+          "status": "Completed"
+        },
+        {
+          "day": "Rabu, 17 Des",
+          "time": "13:00",
+          "match": "SF A: XII RPL 1 vs XI OTKP 2",
+          "status": "Upcoming"
+        },
+        {
+          "day": "Rabu, 17 Des",
+          "time": "13:45",
+          "match": "SF B: X TKJ 1 vs XI RPL 3",
+          "status": "Upcoming"
+        },
+        {
+          "day": "Kamis, 18 Des",
+          "time": "15:00",
+          "match": "GRAND FINAL",
+          "status": "Upcoming"
+        }
+      ],
+      "cps": [
+        {
+          "name": "Akhdan",
+          "phone": "6287867259329"
+        },
+        {
+          "name": "Riza",
+          "phone": "6285210897465"
+        }
+      ],
+      "rules": [
+        "Setiap kelas yang mengikuti lomba maksimal 8 orang yang terdiri dari 5 pemain inti dan 3 pemain Cadangan",
+        "Format permainan yaitu babak gugur",
+        "Pertadingan dimainkan dengan waktu bermain 8 menit kali 2 babak dengan istirahat diantara babak 1 menit (injury time maks 30 detik)",
+        "Apabila kedua tim memiliki 0 goal hingga akhir pertandingan,maka akan dilanjutkan ke babak penalti",
+        "Penalti terdiri oleh 2 penendang,apabila masih seri maka akan dilakukan tos koin,penendang dan pemilih tos koin pertama sesuai yang main pertama",
+        "Setiap pemain dilarang memakai aksesoris berlebihan yang dapat membahayakan saat pertandingan berlangsung",
+        "Perlengkapan pemain ditanggung masing-masing",
+        "Pemanggilan pemain dilakukan saat 2 menit sebelum pertandingan berakhir hingga 2 menit setelah pertandingan selesai,apabila tidak hadir maka dinyatakan gugur/didiskualifikasi",
+        "Denda apabila terkena kartu: a. Kartu Kuning=Rp.10.000,00 b. Kartu Merah=Rp.15.000,00",
+        "Setiap tim membawa uang jaminan sebesar Rp.50.000,00 untuk jaminan denda kartu,uang denda akan dipotong dari uang jaminan,uang akan dikembalikan setelah pertandingan berakhir dengan besar uang sesuai potongan denda/utuh",
+        "Saling jaga rasa hormat kepada lawan,Kawan,wasit,maupun pihak yang terkait dan bermain dengan sportif",
+        "Penonton dari setiap kelas harap kondusif dan respect kepada pemain di lapangan.",
+        "Bila ada kegaduhan yang dilakukan oleh peserta/penonton,maka tim yang terlibat akan beresiko didiskualifikasi untuk pertandingan hari itu dan seri sportif kedepannya",
+        "Segala keputusan yang berhubungan dengan penunjukan wasit tidak bisa diganggu gugat,hanya panitia pelaksana yang berkenan",
+        "Keputusan wasit hanya bisa diganggu gugat oleh kapten setiap tim",
+        "Apabila didiskualifikasi,uang pendaftaran tidak akan dikembalikan"
+      ],
+      "bracket": []
+    },
+    {
+      "id": 2,
+      "title": "Mobile Legends",
+      "icon": "🎮",
+      "color": "border-purple-500",
+      "leaderboard": [
+        {
+          "rank": 1,
+          "team": "dfgdfgsdg",
+          "wins": 3,
+          "losses": 1,
+          "notes": "Gold"
+        },
+        {
+          "rank": 2,
+          "team": "fg",
+          "wins": 1,
+          "losses": 1,
+          "notes": "Bronze"
+        }
+      ],
+      "cps": [
+        {
+          "name": "Rezqy",
+          "phone": "62895392217295"
+        },
+        {
+          "name": "Rafka",
+          "phone": "6289526777216"
+        }
+      ],
+      "rules": [
+        "Pemain merupakan Siswa/i SMAN 18 GARUT",
+        "Setiap pemain hanya boleh terdaftar dalam satu tim selama turnamen berlangsung.",
+        "Turnamen terbuka untuk tim beranggotakan 5 pemain inti dan maksimal 2 pemain cadangan (total 7 anggota).",
+        "Tim wajib mendaftarkan nama tim, dan (User ID) seluruh anggota.",
+        "Tim wajib hadir di lobby yang ditentukan paling lambat 15 menit sebelum jadwal pertandingan.",
+        "Maksimal penundaan pertandingan adalah 3 menit. Keterlambatan melebihi batas akan dianggap walkover.",
+        "Pergantian pemain cadangan hanya dapat dilakukan diantara match dan wajib dilaporkan kepada panitia. Pergantian pemain harus disertai alasan yang jelas seperti sakit, dsb.",
+        "**KODE ETIK DAN PERILAKU**",
+        "1. Sportsmanship : Seluruh peserta wajib menjaga sportivitas. Hinaan, ujaran kebencian, perilaku toxic, atau kecurangan tidak akan ditoleransi.",
+        "2. Dilarang Keras : Stream Sniping, account sharing, menggunakan pihak ketiga (hack/cheat), atau upaya manipulasi pertandingan (match fixing).",
+        "3. Komunikasi : Semua komunikasi resmi dan pengaduan hanya melalui perwakilan tim (kapten) ke panitia.",
+        "**PROSES PENGADUAN DAN SANKSI**",
+        "1. Semua pengaduan harus disertai bukti otentik (screenshot/video/replay) dan diajukan maksimal 15 menit setelah pertandingan berakhir.",
+        "2. Pelanggaran ringan: Teguran lisan/resmi atau pengurangan poin grup.",
+        "3. Pelanggaran berat: Diskualifikasi dari pertandingan, seri, atau seluruh turnamen, serta kemungkinan larangan mengikuti event mendatang.",
+        "4. Panitia berhak mengubah peraturan dengan pemberitahuan sebelumnya demi kelancaran turnamen.",
+        "5. Keputusan panitia dan wasit adalah final.",
+        "6. Peraturan ini berlaku sejak diumumkan dan wajib dipahami oleh seluruh peserta."
+      ],
+      "bracket": [
+        {
+          "round": "Round 1",
+          "matches": []
+        }
+      ],
+      "bracketLeft": [
+        {
+          "round": "Round 1",
+          "matches": [
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            },
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            },
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            },
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            }
+          ]
+        },
+        {
+          "round": "Round 2",
+          "matches": [
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            },
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            }
+          ]
+        },
+        {
+          "round": "Round 3",
+          "matches": [
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            }
+          ]
+        }
+      ],
+      "bracketRight": [
+        {
+          "round": "Round 1",
+          "matches": [
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            },
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            }
+          ]
+        },
+        {
+          "round": "Round 2",
+          "matches": [
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            }
+          ]
+        },
+        {
+          "round": "Round 3",
+          "matches": [
+            {
+              "team1": "TBA",
+              "team2": "TBA",
+              "score1": null,
+              "score2": null
+            }
+          ]
+        }
+      ],
+      "grandFinal": {
+        "matches": [
+          {
+            "team1": "Winner A",
+            "team2": "Winner B",
+            "score1": "1",
+            "score2": "0"
+          }
+        ]
+      },
+      "schedule": [
+        {
+          "day": "Selasa, 16 Des",
+          "time": "00:00",
+          "match": "A vs B",
+          "status": "Completed"
+        },
+        {
+          "day": "Selasa, 16 Des",
+          "time": "00:00",
+          "match": "d g v",
+          "status": "Delayed"
+        }
+      ],
+      "bracketType": "double"
+    },
+    {
+      "id": 3,
+      "title": "Battle Of Brain (BOB)",
+      "icon": "🧠",
+      "color": "border-yellow-500",
+      "leaderboard": [],
+      "cps": [
+        {
+          "name": "Dea",
+          "phone": "62895428105566"
+        },
+        {
+          "name": "Intan",
+          "phone": "6287779967120"
+        }
+      ],
+      "rules": [
+        "Perkelas dapat mengirimkan perwakilan minimal 2-3 orang, maksimal 5 orang",
+        "Setiap peserta membawa alat tulis pulpen/pensil dan selembar kertas kosong",
+        "Peserta harus mendengarkan arahan panitia/PJ",
+        "Dilarang curang (bekerja sama dengan peserta yang lain ataupun dengan penonton)",
+        "Diskusi dengan peserta lain di perbolehkan di babak kelompok saja"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Handball",
+      "icon": "🤾",
+      "color": "border-orange-500",
+      "leaderboard": [],
+      "cps": [
+        {
+          "name": "Imas",
+          "phone": "6283892686733"
+        },
+        {
+          "name": "Wulan",
+          "phone": "62895810297733"
+        }
+      ],
+      "rules": [
+        "1 kelas yang terdiri dari 7 pemain perempuan (termasuk penjaga gawang)",
+        "durasi pertandingan 7 menit",
+        "permainan fokus pada melempar, menangkap, serta mencetak gol dengan tangan",
+        "Pemain tidak boleh menyentuh bola dengan kaki atau bagian bawah tubuh, dibatasi hanya boleh memegang bola selama 3 detik",
+        "mengoper maksimal 3 langkah sambil membawa bola",
+        "Pelanggaran seperti menyentuh bola di bawah lutut, mendorong, menarik, atau memukul lawan akan dikenakan sanksi."
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Estafet Lari",
+      "icon": "🏃",
+      "color": "border-red-500",
+      "leaderboard": [],
+      "cps": [
+        {
+          "name": "Attiya",
+          "phone": "6289510367591"
+        },
+        {
+          "name": "Faisal",
+          "phone": "6289516855111"
+        }
+      ],
+      "rules": [
+        "Satu tim terdiri dari 4 pelari dengan urutan yang sudah ditentukan.",
+        "Setiap pelari hanya boleh menempuh satu bagian lintasan.",
+        "Tongkat estafet dibawa dengan tangan dan tidak boleh dilempar saat pergantian.",
+        "Pergantian tongkat harus dilakukan di zona pergantian yang sudah ditandai.",
+        "Tongkat jatuh membuat tim langsung didiskualifikasi.",
+        "Pelari selanjutnya mulai bergerak saat pelari sebelumnya masuk zona pergantian.",
+        "Semua peserta harus tetap di jalurnya dan tidak boleh menghalangi tim lain.",
+        "Start hanya boleh dilakukan setelah aba-aba resmi dari panitia.",
+        "Pelari terakhir wajib membawa tongkat sampai melewati garis finish.",
+        "Tim menang jika mencapai garis finish paling cepat tanpa pelanggaran.",
+        "Pergantian di luar zona, menghalangi lawan, atau keluar jalur bisa menyebabkan diskualifikasi."
+      ]
+    },
+    {
+      "title": "Best Supporter",
+      "icon": "🙌🏼",
+      "color": "border-purple-500",
+      "cps": [],
+      "rules": [
+        "Supporter berada di lapangan selama kegiatan berlangsung.",
+        "Dilarang menghina, mengejek, atau memprovokasi pemain lawan maupun Supporter lain.",
+        "Dilarang melakukan tindakan yang dapat mengganggu kegiatan berlangsung.",
+        "Dilarang melakukan tindakan yang dapat memicu keributan.",
+        "Mematuhi dan menghormati keputusan wasit, pelatih, dan panitia.",
+        "Bagi yang melanggar akan dikenakan pengurangan poin untuk “Best Supporter”."
+      ],
+      "id": 6
+    }
+  ]
+}

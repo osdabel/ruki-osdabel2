@@ -6,10 +6,88 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model DayRoute {
+  day       String   @id @unique // "selasa", "rabu", etc.
+  url       String
+  updatedAt DateTime @updatedAt
+}
+
+model Competition {
+  id           Int                @id @default(autoincrement())
+  title        String
+  icon         String
+  color        String
+  bracketType  String             @default("single") // "single", "double"
+  
+  // JSON fields for complex nested array structures
+  grandFinal   Json?              @default("{}") // Object with matches array
+  bracket      Json?              @default("[]") // Array of rounds (Single bracket)
+  bracketLeft  Json?              @default("[]") // Array of rounds (Double bracket)
+  bracketRight Json?              @default("[]") // Array of rounds (Double bracket)
+  
+  // Relations
+  leaderboard  LeaderboardEntry[]
+  schedule     ScheduleItem[]
+  cps          ContactPerson[]
+
+  
+  rulesList    String[]           @map("rules") // Using scalar list for simple string array
+  
+  registrations Registration[]
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+}
+
+// Rules are stored as a scalar list in the Competition model
+
+// Rules are stored as a scalar list in the Competition model
+
+
+model LeaderboardEntry {
+  id            Int         @id @default(autoincrement())
+  rank          Int
+  team          String
+  wins          Int         @default(0)
+  losses        Int         @default(0)
+  notes         String      @default("")
+  
+  competitionId Int
+  competition   Competition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+}
+
+model ScheduleItem {
+  id            Int         @id @default(autoincrement())
+  day           String
+  time          String
+  match         String
+  status        String      @default("Upcoming")
+  
+  competitionId Int
+  competition   Competition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+}
+
+model ContactPerson {
+  id            Int         @id @default(autoincrement())
+  name          String
+  phone         String
+  
+  competitionId Int
+  competition   Competition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+}
+model Registration {
+  id            Int         @id @default(autoincrement())
+  name          String
+  class         String
+  teamName      String
+  phone         String
+  competitionId Int
+  competition   Competition @relation(fields: [competitionId], references: [id], onDelete: Cascade)
+  createdAt     DateTime    @default(now())
 }
