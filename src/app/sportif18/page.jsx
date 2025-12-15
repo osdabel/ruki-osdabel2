@@ -86,9 +86,8 @@ const Sportif18 = () => {
     };
 
     // Logic for active days
-    // const today = currentTime.getDate();
-    const today = 17; // DUMMY DATE: Set to 17 simulate 17th December
-    const currentMonth = 11; // currentTime.getMonth(); // 0-indexed (11 is December)
+    const today = currentTime.getDate();
+    const currentMonth = currentTime.getMonth(); // 0-indexed (11 is December)
     const activeDays = [];
 
     // Assuming event is in December (month 11)
@@ -941,6 +940,73 @@ const Sportif18 = () => {
                     transition={{ type: "spring", stiffness: 80, damping: 20 }}
                 >
                     <CompetitionList competitions={competitions} />
+                </motion.div>
+
+                {/* General Rules Section */}
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ amount: 0.1 }}
+                    variants={fadeInUp}
+                    className="mt-16 mb-12"
+                >
+                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-8 -mt-8 opacity-50"></div>
+
+                        <h2 className="text-2xl font-black text-blue-950 mb-6 flex items-center gap-3 relative z-10">
+                            <span className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="fill-current">
+                                    <path d="M560-360q17 0 29.5-12.5T602-402q0-17-12.5-29.5T560-444q-17 0-29.5 12.5T518-402q0 17 12.5 29.5T560-360Zm-320-40q17 0 29.5-12.5T282-442q0-17-12.5-29.5T240-484q-17 0-29.5 12.5T198-442q0 17 12.5 29.5T240-400Zm320-160q17 0 29.5-12.5T602-602q0-17-12.5-29.5T560-644q-17 0-29.5 12.5T518-602q0 17 12.5 29.5T560-560Zm-320-40q17 0 29.5-12.5T282-642q0-17-12.5-29.5T240-684q-17 0-29.5 12.5T198-642q0 17 12.5 29.5T240-600ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0 0v-560 560Z" />
+                                </svg>
+                            </span>
+                            Peraturan Umum
+                        </h2>
+
+                        <div className="space-y-4 text-gray-600 relative z-10">
+                            {[
+                                "Siswa hadir ke sekolah jam 06.30",
+                                "Berkumpul di lapangan jam 07.00",
+                                {
+                                    text: "Siswa mengenakan pakaian:",
+                                    subitems: [
+                                        "Selasa (OlahRaga)",
+                                        "Rabu (Baju kelas jika punya / Training sopan)",
+                                        "Kamis (Training sopan)",
+                                        "Jumat (OlahRaga)",
+                                    ],
+                                    note: "NOTE: tidak diperbolehkan memakai sepatu berwarna putih, wajib berdominan hitam (kecuali pemain boleh, tetapi harus dibekal)"
+                                },
+                                "Siswa wajib mengikuti instruksi panitia sportif",
+                                "Siswa diwajibkan berpartisipasi aktif dalam kegiatan sportif, baik sebagai peserta maupun pendukung",
+                                "Siswa diharapkan menjunjung tinggi sportivitas dalam setiap pertandingan dan menghindari perilaku curang atau kasar.",
+                                "Siswa diharapkan untuk menjaga kebersihan dan tidak ada yang membuang sampah sembarangan",
+                                "Siswa pulang sekolah seperti biasa jam 15.00"
+                            ].map((rule, idx) => (
+                                <div key={idx} className="flex gap-3 items-start">
+                                    <span className="flex-shrink-0 w-6 h-6 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">
+                                        {idx + 1}
+                                    </span>
+                                    <div className="text-sm leading-relaxed">
+                                        {typeof rule === 'string' ? (
+                                            rule
+                                        ) : (
+                                            <div>
+                                                <p className="font-semibold text-gray-700">{rule.text}</p>
+                                                <ul className="mt-2 space-y-1 ml-1 border-l-2 border-blue-100 pl-3">
+                                                    {rule.subitems.map((sub, sIdx) => (
+                                                        <li key={sIdx} className="text-gray-500">• {sub}</li>
+                                                    ))}
+                                                </ul>
+                                                <p className="mt-2 text-xs font-medium text-red-600 bg-red-50 p-2 rounded-lg border border-red-100 inline-block w-full">
+                                                    {rule.note}
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </motion.div>
 
             </div>
